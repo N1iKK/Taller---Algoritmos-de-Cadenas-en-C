@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 //Main menu
@@ -45,5 +46,5 @@ void main()
 			break;
 		}
 
-	} while (op != 10);
+	} while (op != 11);
 }
