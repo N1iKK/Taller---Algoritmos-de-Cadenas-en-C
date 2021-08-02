@@ -15,16 +15,19 @@ void main()
 		switch (op)
 		{
 		case 1:
-			//Convertir en nombre Propio el contenido del a cadena
+			//Convertir en nombre Propio el contenido de la cadena
 
 			printf("Digite una palabra\n");
 			
-			char cadena[100];
-			scanf_s("%s", cadena,12);
+			char cadena[200];
 			char* p;
-
 			p = cadena;
 
+			gets(cadena);
+			gets(p);
+
+			printf("%s\n", p);
+			
 			int i=1;
 			while (*p != '\0') {
 
@@ -41,12 +44,14 @@ void main()
 					*p = *p - 'a' + 'A';
 					i = 0;
 				}
-				//printf("%s\n", p);
+			printf("%s\n", p);
 				p++;
 			}
 
 			printf("La cadena queda: \"%s\" \n", cadena);
+			
 
+			
 			break;
 		case 2:
 			//Contar el número de veces que existe una palabra en una cadena
