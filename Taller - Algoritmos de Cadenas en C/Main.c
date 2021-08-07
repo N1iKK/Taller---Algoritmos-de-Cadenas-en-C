@@ -58,17 +58,17 @@ void main()
 
 			char text[200];
 			char* tok;
+			char* next_tok1;
 			int cont = 0;
 			char palabra[20];
 
 			gets(text);
-			//scanf_s("%s", text,200);
+			gets(text);
 			printf("Ingrese una palabra a buscar dentro del texto.\n>>");
 
 			gets(palabra);
-			//scanf_s("%s", palabra, 20);
 
-			tok = strtok_s(text, " ",",",".",":",";");
+			tok = strtok_s(text, " \,\.\:\;", &next_tok1);
 			
 			while (tok != NULL)
 			{
@@ -76,7 +76,7 @@ void main()
 				{
 					cont++;
 				}
-				tok = strtok_s(NULL, " ", ",", ".", ":", ";");
+				tok = strtok_s(NULL, " \,\.\:\;", &next_tok1);
 			}
 
 			printf("La palabra (%s) se encontro (%i) veces\n", palabra, cont);
