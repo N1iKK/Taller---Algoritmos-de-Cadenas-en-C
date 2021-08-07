@@ -53,6 +53,34 @@ void main()
 			break;
 		case 2:
 			//Contar el número de veces que existe una palabra en una cadena
+
+			printf("Ingrese un texto (Maximo 200 letras).\n>>");
+
+			char text[200];
+			char* tok;
+			int cont = 0;
+			char palabra[20];
+
+			gets(text);
+			//scanf_s("%s", text,200);
+			printf("Ingrese una palabra a buscar dentro del texto.\n>>");
+
+			gets(palabra);
+			//scanf_s("%s", palabra, 20);
+
+			tok = strtok_s(text, " ",",",".",":",";");
+			
+			while (tok != NULL)
+			{
+				if (_stricmp(tok, palabra)==0) 
+				{
+					cont++;
+				}
+				tok = strtok_s(NULL, " ", ",", ".", ":", ";");
+			}
+
+			printf("La palabra (%s) se encontro (%i) veces\n", palabra, cont);
+
 			break;
 		case 3:
 			//Enctriptar cadena
