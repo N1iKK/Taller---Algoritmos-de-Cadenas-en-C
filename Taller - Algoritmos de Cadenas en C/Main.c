@@ -6,6 +6,7 @@
 //Main menu
 void main()
 {
+	char cadena[200];
 	int op;
 	do
 	{
@@ -19,7 +20,7 @@ void main()
 
 			printf("Digite una palabra\n>>");
 			
-			char cadena[200];
+			//char cadena[200];
 			char* p;
 			p = cadena;
 
@@ -56,19 +57,18 @@ void main()
 
 			printf("Ingrese un texto (Maximo 200 letras).\n>>");
 
-			char text[200];
 			char* tok;
 			char* next_tok1;
 			int cont = 0;
 			char palabra[20];
 
-			gets(text);
-			gets(text);
+			gets(cadena);
+			gets(cadena);
 			printf("Ingrese una palabra a buscar dentro del texto.\n>>");
 
 			gets(palabra);
 
-			tok = strtok_s(text, " \,\.\:\;", &next_tok1);
+			tok = strtok_s(cadena, " \,\.\:\;", &next_tok1);
 			
 			while (tok != NULL)
 			{
@@ -84,9 +84,49 @@ void main()
 			break;
 		case 3:
 			//Enctriptar cadena
+
+			printf("Ingrese el texto que quiere encriptar\n>>");
+
+			gets(cadena);
+			gets(cadena);
+
+			for (int i = 0; i < 200 ; i++)
+			{
+				
+				if (cadena[i] == -52)
+				{
+					i++;
+				}
+				else
+				{
+					//printf("%c\n", cripText[i]);
+					printf("%c", cadena[i]+1);
+				}
+			}
+
 			break;
 		case 4:
 			//Desencriptar
+
+			printf("Ingrese el texto que quiere desencriptar\n>>");
+
+			gets(cadena);
+			gets(cadena);
+
+			for (int i = 0; i < 200; i++)
+			{
+
+				if (cadena[i] == -52)
+				{
+					i++;
+				}
+				else
+				{
+					//printf("%c\n", cripText[i]);
+					printf("%c", cadena[i] - 1);
+				}
+			}
+
 			break;
 		case 5:
 			//Llenar caracteres por Izquierda o por derecha
