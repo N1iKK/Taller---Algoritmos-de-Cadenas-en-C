@@ -55,7 +55,7 @@ void main()
 			
 			break;
 		case 2:
-			//Contar el n�mero de veces que existe una palabra en una cadena
+			//Contar el número de veces que existe una palabra en una cadena
 
 			printf("Ingrese un texto (Maximo 200 letras).\n>>");
 
@@ -129,24 +129,55 @@ void main()
 				}
 			}
 
-			break;
-		case 5:
-			//Llenar caracteres por Izquierda o por derecha
-			break;
-		case 6:
-			//Borrar caracteres de una cadena
-			break;
-		case 7:
-			//Interseccion
-			break;
-		case 8:
-			//Diferencia entre dos cadenas
-			break;
-		case 9:
-			//Borrar caracteres Izquierda o Derecha
-			break;
-		case 10:
-			//Validar correo electronico
+                break;
+            case 5: {
+                printf("Ingrese el texto");
+                gets(cadena);
+                gets(cadena);
+                int numRepe;
+                printf("ingrese la cantidad de veces");
+                scanf("%i",&numRepe);
+                char variableCaracter[numRepe];
+                printf("ingrese el caracter que quiere añadir");
+
+                gets(variableCaracter);
+                gets(variableCaracter);
+
+
+                printf("ingrese 1 para añadir por derecha\ningrese 2 para añadir por la izquierda");
+                int op;
+                scanf("%d",&op);
+
+                if(op==1){
+                    for (int i = 0; i < numRepe; ++i) {
+                        strcat(cadena, variableCaracter);
+                    }
+                    printf("El nombre completo es: %s.\n", cadena);
+
+                }if(op==2){
+                    for (int i = 0; i < numRepe; ++i) {
+                        printf(variableCaracter);
+                        //strcat(cadena, variableCaracter);
+                    }
+                    printf(cadena);
+
+                }
+            }
+                break;
+            case 6:
+                //Borrar caracteres de una cadena
+                break;
+            case 7:
+                //Interseccion
+                break;
+            case 8:
+                //Diferencia entre dos cadenas
+                break;
+            case 9:
+                //Borrar caracteres Izquierda o Derecha
+                break;
+            case 10:
+                //Validar correo electronico
 
 			printf("Ingrese su correo electronico\n>>");
 
