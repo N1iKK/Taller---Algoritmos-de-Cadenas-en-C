@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 //Main menu
 void main()
 {
 	char cadena[200];
-	int op;
+	char* p;
+	char* tok;
+	char* next_tok1;
+	int op, cont;
 	do
 	{
 		printf("\n_____Menu_____\n1.Convertir en nombre Propio el contenido del a cadena.\n2.Contar el numero de veces que existe una palabra en una cadena.\n3.Enctriptar cadena.\n4.Desencriptar.\n5.Llenar caracteres por Izquierda o por derecha.\n6.Borrar caracteres de una cadena.\n7.Interseccion.\n8.Diferencia entre dos cadenas.\n9.Borrar caracteres Izquierda o Derecha.\n10.Validar correo electronico.\n11.Salir\n>>");
@@ -21,7 +23,7 @@ void main()
 			printf("Digite una palabra\n>>");
 			
 			//char cadena[200];
-			char* p;
+			//char* p;
 			p = cadena;
 
 			gets(cadena);
@@ -57,9 +59,9 @@ void main()
 
 			printf("Ingrese un texto (Maximo 200 letras).\n>>");
 
-			char* tok;
-			char* next_tok1;
-			int cont = 0;
+			//char* tok;
+			//char* next_tok1;
+			cont = 0;
 			char palabra[20];
 
 			gets(cadena);
@@ -146,11 +148,43 @@ void main()
 		case 10:
 			//Validar correo electronico
 
-			
+			printf("Ingrese su correo electronico\n>>");
 
+			gets(cadena);
+			gets(cadena);
 
+			for (int i = 0; i < 40; i++)
+			{
+				tok = strstr(cadena, "@");
+				if (tok != NULL)
+				{
+					break;
+				}
+			}
+			for (int i = 0; i < 40; i++)
+			{
+				next_tok1 = strstr(cadena, ".");
+				if (next_tok1 != NULL && &next_tok1 > &tok)
+				{
+					break;
+				}
+			}
 
-			break;
+			if (tok != NULL)
+			{
+				if (next_tok1 != 0 && &next_tok1 > &tok)
+				{
+					printf("Correo valido.");
+				}
+				else
+				{
+					printf("Su correo es invalido, por favor reviselo.");
+				}
+			}
+			else
+			{
+				printf("Su correo es invalido, por favor reviselo.");
+			}
 		}
 
 	} while (op != 11);
