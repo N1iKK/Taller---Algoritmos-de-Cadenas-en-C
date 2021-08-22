@@ -152,7 +152,7 @@ void main()
                     for (int i = 0; i < numRepe; ++i) {
                         strcat(cadena, variableCaracter);
                     }
-                    printf("El nombre completo es: %s.\n", cadena);
+                    printf("%s.\n", cadena);
 
                 }if(op==2){
                     for (int i = 0; i < numRepe; ++i) {
@@ -165,6 +165,26 @@ void main()
             }
                 break;
             case 6:
+
+                printf("ingrese la cadena de texto");
+                char newText[100];
+                char borrar;
+                gets(cadena);
+                gets(cadena);
+                int longText = strlen(cadena);
+                printf("Ingrese el caracter que quiere borrar");
+                scanf_s("%c",&borrar);
+                int contador=0;
+
+                for (int i = 0; i < longText; ++i) {
+                    if (cadena[i] != borrar){
+                        newText[contador]= cadena[i];
+                        contador++;
+                    }
+                }
+                newText[contador] = '\0';
+
+                printf("%s\n", newText) ;
                 //Borrar caracteres de una cadena
                 break;
             case 7:
