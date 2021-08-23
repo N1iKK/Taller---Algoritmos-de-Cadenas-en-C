@@ -157,14 +157,13 @@ void main() {
             }
                 break;
             case 6:
-
-                printf("ingrese la cadena de texto");
+                printf("ingrese la cadena de texto\n>>");
                 char newText[100];
                 char borrar;
                 gets(cadena);
                 gets(cadena);
                 int longText = strlen(cadena);
-                printf("Ingrese el caracter que quiere borrar");
+                printf("Ingrese el caracter que quiere borrar\n>>");
                 scanf_s("%c", &borrar);
                 int contador = 0;
 
@@ -177,7 +176,7 @@ void main() {
                 newText[contador] = '\0';
 
                 printf("%s\n", newText);
-                //Borrar caracteres de una cadena
+                //Borrar caracteres de una cadena- falta agregarle condicional a la variable borrar.
                 break;
             case 7:
 
