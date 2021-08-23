@@ -136,44 +136,45 @@ void main()
                 gets(cadena);
                 int numRepe;
                 printf("ingrese la cantidad de veces\n>>");
-                scanf("%i",&numRepe);
-                char variableCaracter[numRepe];
-                if(numRepe<0){
+                if(scanf_s("%i",&numRepe) !=1) {
+                    printf("el valor debe ser un entero");
+                }else if(numRepe<0){
                     printf("Error!!!, no puede ingresar cantidades negativas");
-                }else{
-                printf("ingrese el caracter que quiere añadir\n>>");
-
-                gets(variableCaracter);
-                gets(variableCaracter);
-
-
-
-                printf("ingrese 1 para añadir por derecha\ningrese 2 para añadir por la izquierda\n>>");
-                int op;
-                scanf("%d",&op);
-
-                if(op!=1 && op!=2){
-                    printf("Error!!, Valor fuera de parámetro");
                 }
+                else{
+                    char variableCaracter[numRepe];
+                        printf("ingrese el caracter que quiere añadir\n>>");
 
-                if(op==1){
-                    for (int i = 0; i < numRepe; ++i) {
-                        strcat(cadena, variableCaracter);
+                        gets(variableCaracter);
+                        gets(variableCaracter);
+
+
+
+                        printf("ingrese 1 para añadir por derecha\ningrese 2 para añadir por la izquierda\n>>");
+                        int op;
+                        scanf("%d",&op);
+
+                        if(op!=1 && op!=2){
+                            printf("Error!!, Valor fuera de parámetro");
+                        }
+
+                        if(op==1){
+                            for (int i = 0; i < numRepe; ++i) {
+                                strcat(cadena, variableCaracter);
+                            }
+                            printf("La cadena queda:\n");
+                            printf("%s.\n", cadena);
+
+                        }if(op==2){
+                            printf("La cadena queda:\n");
+                            for (int i = 0; i < numRepe; ++i) {
+                                printf(variableCaracter);
+                                //strcat(cadena, variableCaracter);
+                            }
+                            printf(cadena);
+                        }
                     }
-                    printf("La cadena queda:\n");
-                    printf("%s.\n", cadena);
-
-                }if(op==2){
-                        printf("La cadena queda:\n");
-                    for (int i = 0; i < numRepe; ++i) {
-                        printf(variableCaracter);
-                        //strcat(cadena, variableCaracter);
-                    }
-                    printf(cadena);
-
                 }
-                }
-            }
                 break;
             case 6:
 
