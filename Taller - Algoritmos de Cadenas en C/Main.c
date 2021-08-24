@@ -205,6 +205,27 @@ void main() {
                 break;
             case 8:
                 //Diferencia entre dos cadenas
+                  char* palabra2[20];
+                  char* palabra[50];
+                    printf("ingrese la palabra: \n");
+                    gets(palabra);
+                    printf("ingrese la palabra: \n");
+                    gets(palabra2);
+                    for (int i = 0; i < sizeof palabra; ++i) {
+
+                        for (int j = 0; j < sizeof palabra2; ++j) {
+
+                            if(strcmp(palabra[i],palabra2[j]) ==0){
+                                printf("\nson iguales");
+                                char aux;
+                                char dos=palabra[j];
+
+                                aux=dos;
+                                printf("\n%c -", aux);
+
+                            }
+                        }
+                    }
                 break;
             case 9:
                 //Borrar caracteres Izquierda o Derecha
