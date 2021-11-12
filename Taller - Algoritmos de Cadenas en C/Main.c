@@ -181,12 +181,79 @@ void main() {
             case 7:
 
                 //Interseccion
+                  char repetir[20];
+                    char cadena[] = "Colombia";
+                    char cadena1[]= "Sogamoso cuidad del sol y del acero";
+                    for (int i = 0; i < sizeof cadena; ++i) {
+                        for (int j = 0; j < sizeof cadena1; ++j) {
+                            char aux;
+                            aux=""+cadena[i];
+                            if(cadena[i]==cadena1[j]){
+                                if (strstr(&repetir,aux)){
+
+                                }else{
+                                   char repetir=""+repetir+cadena[i];
+                                }
+                            }
+
+
+
+                        }
+                    }
+                    printf("%s", repetir);
+                    return 0;
                 break;
             case 8:
                 //Diferencia entre dos cadenas
+                  char* palabra2[20];
+                  char* palabra[50];
+                    printf("ingrese la palabra: \n");
+                    gets(palabra);
+                    printf("ingrese la palabra: \n");
+                    gets(palabra2);
+                    for (int i = 0; i < sizeof palabra; ++i) {
+
+                        for (int j = 0; j < sizeof palabra2; ++j) {
+
+                            if(strcmp(palabra[i],palabra2[j]) ==0){
+                                printf("\nson iguales");
+                                char aux;
+                                char dos=palabra[j];
+
+                                aux=dos;
+                                printf("\n%c -", aux);
+
+                            }
+                        }
+                    }
                 break;
             case 9:
                 //Borrar caracteres Izquierda o Derecha
+                            char caracter[1];
+                int a =0;
+                printf("digite el caracter\n");
+                gets(caracter);
+
+                char cadena1[]= "Sogamoso cuidad del sol y del acero";
+                printf("%s",cadena1);
+
+                while (cadena1[a]!='\0'){
+                    if (cadena1[a]==caracter){
+                        for (int i = 0; i < sizeof cadena1; ++i) {
+
+                            cadena1[i]=' ';
+
+                        }
+                     }else{
+
+                        printf("%s",cadena1[a]);
+                    }
+                    a++;
+                }
+                printf("%s",cadena1);
+            return 0;  
+              
+                break;ux);
                 break;
             case 10:
                 //Validar correo electronico
