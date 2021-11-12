@@ -113,7 +113,7 @@ void main() {
 
                 break;
             case 5: {
-                printf("Ingrese el texto\n>>");
+                /*printf("Ingrese el texto\n>>");
                 gets(cadena);
                 gets(cadena);
                 int numRepe;
@@ -153,7 +153,7 @@ void main() {
                         }
                         printf(cadena);
                     }
-                }
+                }*/
             }
                 break;
             case 6:
